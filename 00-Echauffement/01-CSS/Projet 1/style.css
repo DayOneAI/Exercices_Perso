@@ -35,10 +35,110 @@ body {
     /* background-image: url(./01-Assets/hero.jpg); */
     background-image: linear-gradient(
         to right bottom, 
-        rgba(255, 192, 203, 0.801), 
+        rgba(255, 192, 203, 0.603), 
         rgba(143, 11, 33, 0.801)),
         url(./01-Assets/hero.jpg);
     background-size: cover; /* Remplit complétement l'élement */
     background-position: top; /* Colle l'image toujours au dessus */
+    position: relative;
 
+    /* clip-path: polygon(x y, x y, x y, x y ); créer un polygone, coordonnées points dans le sens des éguilles d'une montre */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    /* Exemple code clip-path : https://bennettfeely.com/clippy/ */
+
+}
+
+/* Nous allons placer le logo en haut à gauche */
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+
+/* Nous allons placer le titre au centre */
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    /*backface-visibility: hidden;  la face arrière de l'élément est invisible, evite le reflet lors de l'animation */
+
+}
+
+.heading-primary-main {
+    display: block; /* Occupe toute la ligne en créant un espace au-dessus et en dessus également */
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px; /* Espacement entre les mots */
+
+    animation-name: moveInLeft; /* Appel de l'animation créee */
+    animation-duration: 2s; /* Durée de l'animation */
+    animation-delay: 1s; /* Délai d'attente avant le démarrage de l'animation */
+    animation-iteration-count: 3; /* Nbre de répétition de l'animation */
+    animation-timing-function: ease-out ;/* Définit une fonction de comment procede l'animation */
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px; /* Espacement entre les mots */
+
+    animation: moveInRight 2s ease-out 1s 3;
+}
+
+/* Nous allons créer une animation pour le titre du header */
+@keyframes moveInLeft {
+    /* Caractéristique de l'animation (à quoi l'objet va ressembler) avant le début (0%) */
+    0% {
+        opacity: 0; /* objet invisible */
+        transform: translateX(-100px) rotate(0deg);
+    }
+
+    /* Caractéristique de l'animation à 60%) */
+    60% {
+        transform: rotate(180deg)
+    }
+
+    /* Caractéristique de l'animation à 80%) */
+    80% {
+        transform: translateX(10px);
+    }
+
+    /* Caractéristique de l'animation à 100% de la durée) */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* Caractéristique de l'animation (à quoi l'objet va ressembler) avant le début (0%) */
+    0% {
+        opacity: 0; /* objet invisible */
+        transform: translateX(100px);
+    }
+
+    /* Caractéristique de l'animation à 80%) */
+    80% {
+        transform: translateX(-10px);
+    }
+
+    /* Caractéristique de l'animation à 100% de la durée) */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
