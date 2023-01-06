@@ -87,11 +87,11 @@ body {
     animation-duration: 2s; /* Durée de l'animation */
     animation-delay: 1s; /* Délai d'attente avant le démarrage de l'animation */
     animation-iteration-count: 3; /* Nbre de répétition de l'animation */
-    animation-timing-function: ease-out ;/* Définit une fonction de comment procede l'animation */
+    animation-timing-function: ease-out ;/* Définit une fonction de comment procede l'animation - acceleration en entrée / sortie par exemple */
 }
 
 .heading-primary-sub {
-    display: block;
+    display: block; /* Renvoie les autres elemnts à la ligne */
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px; /* Espacement entre les mots */
@@ -105,11 +105,6 @@ body {
     0% {
         opacity: 0; /* objet invisible */
         transform: translateX(-100px) rotate(0deg);
-    }
-
-    /* Caractéristique de l'animation à 60%) */
-    60% {
-        transform: rotate(180deg)
     }
 
     /* Caractéristique de l'animation à 80%) */
