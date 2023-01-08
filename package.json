@@ -1,0 +1,22 @@
+{
+  "name": "exercices_perso",
+  "version": "1.0.0",
+  "description": "Exercice CSS et SASS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass 00-Echauffement/02-SCSS/02-Sass/main.scss 02-SCSS/02-Sass/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DayOneAI/Exercices_Perso.git"
+  },
+  "author": "Bamba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DayOneAI/Exercices_Perso/issues"
+  },
+  "homepage": "https://github.com/DayOneAI/Exercices_Perso#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
