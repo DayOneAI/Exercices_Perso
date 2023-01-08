@@ -4,7 +4,7 @@
   "description": "Exercice CSS et SASS",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass 00-Echauffement/02-SCSS/02-Sass/main.scss 02-SCSS/02-Sass/style.css"
+    "compile:sass": "node-sass 00-Echauffement/02-SCSS/02-Sass/main.scss 00-Echauffement/02-SCSS/style.css -w"
   },
   "repository": {
     "type": "git",
