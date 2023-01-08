@@ -1,0 +1,55 @@
+/* ----------------- Nous allons créer une animation pour le titre du header ------------------*/
+
+@keyframes moveInLeft {
+    /* Caractéristique de l'animation (à quoi l'objet va ressembler) avant le début (0%) */
+    0% {
+        opacity: 0; /* objet invisible */
+        transform: translateX(-100px) rotate(0deg);
+    }
+
+    /* Caractéristique de l'animation à 80%) */
+    80% {
+        transform: translateX(10px);
+    }
+
+    /* Caractéristique de l'animation à 100% de la durée) */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* Caractéristique de l'animation (à quoi l'objet va ressembler) avant le début (0%) */
+    0% {
+        opacity: 0; /* objet invisible */
+        transform: translateX(100px);
+    }
+
+    /* Caractéristique de l'animation à 80%) */
+    80% {
+        transform: translateX(-10px);
+    }
+
+    /* Caractéristique de l'animation à 100% de la durée) */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInBottom {
+    /* Caractéristique de l'animation (à quoi l'objet va ressembler) avant le début (0%) */
+    0% {
+        opacity: 0; /* objet invisible */
+        transform: translateY(30px);
+    }
+
+
+    /* Caractéristique de l'animation à 100% de la durée) */
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

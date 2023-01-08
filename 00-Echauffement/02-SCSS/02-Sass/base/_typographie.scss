@@ -1,0 +1,51 @@
+
+
+
+body {
+
+    /* PROPRIETES DE POLICE => on le fait dans le Body */
+    font-family: "Lato", sans-serif;
+    font-weight: 400; /* Caractère police */
+    /*font-size: 16px;  Taille de police */
+    line-height: 1.7; /* Spécifie la hauteur d'une ligne de texte */
+    color: $color-grey;
+    /* padding: 30px; */
+    padding: 3rem; /* veut dire dans notre cas une taille égale à 3 * 10px soit 30px */
+    
+}
+
+
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    /*backface-visibility: hidden;  la face arrière de l'élément est invisible, evite le reflet lors de l'animation */
+    /* margin-bottom: 60px ; */
+    margin-bottom: 6rem ;
+
+    &--main {
+        display: block; /* Occupe toute la ligne en créant un espace au-dessus et en dessus également */
+        /* font-size: 60px; */
+        font-size: 6rem;
+        font-weight: 400;
+        /*letter-spacing: 35px;  Espacement entre les mots */
+        letter-spacing: 3.5rem; /* Espacement entre les mots */
+    
+        animation-name: moveInLeft; /* Appel de l'animation créee */
+        animation-duration: 2s; /* Durée de l'animation */
+        animation-delay: 1s; /* Délai d'attente avant le démarrage de l'animation */
+        animation-iteration-count: 3; /* Nbre de répétition de l'animation */
+        animation-timing-function: ease-out ;/* Définit une fonction de comment procede l'animation - acceleration en entrée / sortie par exemple */
+    }
+    
+    &--sub {
+        display: block; /* Renvoie les autres elemnts à la ligne */
+        /* font-size: 20px; */
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem; /* Espacement entre les mots */
+    
+        animation: moveInRight 2s ease-out 1s 3;
+    }
+
+}

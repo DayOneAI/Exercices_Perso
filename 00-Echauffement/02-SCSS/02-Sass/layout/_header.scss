@@ -1,0 +1,44 @@
+
+
+.header {
+    height: 95vh;
+    /* background-image: url(./01-Assets/hero.jpg); */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary, 0.600), 
+        rgba($color-secondary, 0.863)),
+        url(./01-Assets/hero.jpg);
+    background-size: cover; /* Remplit complétement l'élement */
+    background-position: top; /* Colle l'image toujours au dessus */
+    position: relative;
+
+    /* clip-path: polygon(x y, x y, x y, x y ); créer un polygone, coordonnées points dans le sens des éguilles d'une montre */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    /* Exemple code clip-path : https://bennettfeely.com/clippy/ */
+
+    /* Nous allons placer le logo en haut à gauche */
+
+    &__logo-box {
+        position: absolute; /* Permet à l'élement de se placer au-dessus d'un autre élement */
+        /* top: 40px; */
+        top: 4rem;
+        /* left: 40px; */
+        left: 4rem;
+    }
+
+    &__logo {
+        /* height: 35px; */
+        height: 3.5rem;
+    }
+    
+    
+    /* Nous allons placer le titre au centre */
+    &__text-box {
+        position: absolute; /* Permet à l'élement de se placer au-dessus d'un autre élement */
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+}

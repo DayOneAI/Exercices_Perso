@@ -1,0 +1,20 @@
+/* SELECTEUR UNIVERSEL => Signe étoile : permet de selection tout le code HTML */
+
+*,
+*::after, /* Applique les propriéts sur les éléments d'aprés */
+*::before /* Applique les propriéts sur les éléments d'avant */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*Active l'héritage sur le box-sizing => l'héritage permet de transmettre les propriétés du parent aux enfants*/
+}
+
+html {
+    //définit ce que signifie 1rem => donc réglage de base
+    font-size: 62.5%; /* est le calcul de 10px divisé par 16px, 10px (pour simplifier) étant la valeure qu'on souhaite pour la taille de police par défaut et 16px la taille de police par défaut actuelle */
+}
+
+body {
+
+    box-sizing: border-box; /*Evite qu'un élement de dépasse de son parent à cause des marges/bordures ==> Ceci évite les affichages bizarres*/
+}
