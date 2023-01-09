@@ -53,6 +53,10 @@ html {
   /* est le calcul de 10px divisé par 16px, 10px (pour simplifier) étant la valeure qu'on souhaite pour la taille de police par défaut et 16px la taille de police par défaut actuelle */ }
 
 body {
+  box-sizing: border-box;
+  /*Evite qu'un élement de dépasse de son parent à cause des marges/bordures ==> Ceci évite les affichages bizarres*/ }
+
+body {
   /* PROPRIETES DE POLICE => on le fait dans le Body */
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -63,9 +67,7 @@ body {
   color: #777;
   /* padding: 30px; */
   padding: 3rem;
-  /* veut dire dans notre cas une taille égale à 3 * 10px soit 30px */
-  box-sizing: border-box;
-  /*Evite qu'un élement de dépasse de son parent à cause des marges/bordures ==> Ceci évite les affichages bizarres*/ }
+  /* veut dire dans notre cas une taille égale à 3 * 10px soit 30px */ }
 
 .heading-primary {
   color: #fff;
@@ -159,6 +161,34 @@ body {
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   animation: moveInBottom 0.5 ease-in-out 0.75;
   animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc((2*(100% - 2 * 6rem) / 3 + 6rem)); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-3-of-4 {
+    width: calc((100% - 3 * 6rem) / 4 + (6rem) + (100% - 6rem) / 2); }
 
 .header {
   height: 95vh;
