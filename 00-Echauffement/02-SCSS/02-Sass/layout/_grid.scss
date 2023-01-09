@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    // background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child) { //Application des propriétés sauf au dernir enfant
@@ -10,7 +10,7 @@
     @include clearfix; // Appel du Mixin
 
     [class^="col-"] { // Sélectionne toutes les attributs de classe COMMANçANT par col- => 1 moyen de selectionner les colonnes d'une manière simple (ne pas oublié l'accent circonflexe)
-        background-color: orangered;
+        // background-color: orangered;
         float: left;
 
         &:not(:last-child) { //Application des propriétés sauf au dernir enfant

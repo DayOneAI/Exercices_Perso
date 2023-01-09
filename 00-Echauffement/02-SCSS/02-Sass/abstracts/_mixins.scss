@@ -1,4 +1,4 @@
-@mixin clearfix {
+@mixin clearfix { // astuce utilisée pour éviter le dépassement des blocs flottants, en plaçant tout simplement la class . clearfix sur le bloc conteneur
     &::after {
         content: "";
         display: table;
