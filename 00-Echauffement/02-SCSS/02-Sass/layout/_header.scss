@@ -13,6 +13,7 @@
     position: relative;
 
     /* clip-path: polygon(x y, x y, x y, x y ); créer un polygone, coordonnées points dans le sens des éguilles d'une montre */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // pour que le clip-path marche sur les autres navigateurs
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
     /* Exemple code clip-path : https://bennettfeely.com/clippy/ */
 
