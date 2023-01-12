@@ -85,7 +85,7 @@
 
     &__heading-span {
         padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone; // pour que le box-decoration fonctionne chez les autres navigateurs
         box-decoration-break: clone; // permet un laignement des mots (à droite ici)
 
         &--1 {
