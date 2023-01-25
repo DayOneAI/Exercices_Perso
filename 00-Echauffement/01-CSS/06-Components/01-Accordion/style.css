@@ -1,0 +1,66 @@
+/*  MAIN COLOR : #087f5b 
+    MAIN GREY : #343a40 */
+
+/* ------------------TEST BAMBA ------------------- */
+
+.component {
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+  width: 80%;
+  padding: 20px 30px;
+  max-width: 600px;
+  margin: 25px auto;
+  background-color: #a2a5a823;
+  box-sizing: border-box;
+  position: relative;
+  /* border: 1px solid; */
+  border-radius: 10px;
+  box-shadow: aqua;
+}
+
+.component::before {
+  content: "";
+  /* margin: 0;
+  padding: 0;
+  display: inline-block; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  border-top: solid 4px #087f5b;
+}
+
+.en_tete {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #087f5b;
+  font-weight: bold;
+  /* letter-spacing: 0px; */
+}
+
+.number {
+}
+
+.title {
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.text {
+  margin-left: 45px;
+  padding-left: 5px;
+}
+
+.list {
+  /* list-style: none; */
+  margin-left: 45px;
+  padding-left: 25px;
+  color: #a2a5a8e7;
+}
+
+/* ------------------CORRECTION ------------------- */
