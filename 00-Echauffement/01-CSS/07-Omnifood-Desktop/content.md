@@ -131,15 +131,13 @@ Privacy & terms
 
 ## Sections
 
-- Navigation
+- Logo + Navigation
 - Hero
-- Features
-- How it works
-- Diets
-- Meals
-- Pricing
-- Gallery
-- Testimonials
 - Featured in
+- How it works
+- Meals (and list of diets)
+- Gallery
+- Testimonials + gallery
+- Pricing + features
 - CTA (Call To Action)
 - Footer
