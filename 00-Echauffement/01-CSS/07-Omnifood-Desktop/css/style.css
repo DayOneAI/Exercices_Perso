@@ -154,28 +154,8 @@
 /* ****************************** */
 
 .section-how {
-  padding: 9.6px 0;
+  padding: 9.6rem 0;
 }
-
-/* 
-.section-how div div {
-  padding: 10rem;
-  font-size: 5rem;
-  background-color: #333;
-}
-
-.section-how div:nth-child(1) {
-  background-color: aqua;
-}
-.section-how div:nth-child(2) {
-  background-color: blue;
-}
-.section-how div:nth-child(3) {
-  background-color: violet;
-}
-.section-how div:nth-child(4) {
-  background-color: yellow;
-} */
 
 .step-number {
   font-size: 8.6rem;
@@ -228,4 +208,34 @@
 
 .step-img {
   width: 35%;
+}
+
+/* ****************************** */
+/* MEALS SECTION */
+/* ****************************** */
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+}
+
+.meal-img {
+  width: 100%;
 }
