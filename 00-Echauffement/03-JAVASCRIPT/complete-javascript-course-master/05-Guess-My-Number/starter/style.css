@@ -118,6 +118,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.win {
-  background-color: chartreuse;
+.win1 {
+  background-color: #60b347;
+}
+
+.win2 {
+  background-color: none;
 }

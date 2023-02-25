@@ -49,7 +49,7 @@ check.addEventListener('click', function () {
     }
   } else if (guess1 === numAlea) {
     message.textContent = 'Bravo';
-    bagColor.classList.add('win');
+    bagColor.classList.add('win1');
     hightScore.textContent = scoreNum;
   } else {
     message.textContent = 'Erreur_code';
@@ -57,6 +57,7 @@ check.addEventListener('click', function () {
 });
 
 again.addEventListener('click', () => {
-  location.reload();
+  bagColor.classList.add('win2');
+  scoreNum = 20;
   hightScore.textContent = scoreNum;
 });
