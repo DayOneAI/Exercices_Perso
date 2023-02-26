@@ -162,6 +162,42 @@ GOOD LUCK 😀
 
 // 1-)
 
-for (const item of game.scored.entries()) {
-  console.log(`Goal ${item}`);
+for (const [i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`);
 }
+
+// 2-)
+let average = 0;
+for (const odd of Object.values(game.odds)) {
+  average += odd;
+}
+average /= Object.values(game.odds).length;
+console.log(average);
+
+// 3-)
+// for (const odd of Object.values(game.odds)) {
+//   console.log(`Odd of victory Bayern Munich: ${odd}`);
+// }
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `vivtory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
+
+// BONUS-)
+
+const scorers = {};
+
+// for (let x of game.scored) {
+//   if (scorers[x]) {
+//     scorers[x]++;
+//   } else {
+//     scorers[x] = 1;
+//   }
+// }
+
+for (let x of game.scored) {
+  scorers[x]++ || (scorers[x] = 1);
+}
+
+console.log(scorers);
