@@ -28,7 +28,7 @@ const data = {
 /********** FONCTION DE RECUPERATION LIENS */
 function liensWeb(lien) {
   for (let index in data) {
-    fetch(`https:${data[1].path}`)
+    fetch(`https:${data[index].path}`)
       .then((res) => res.blob()) // Gets the response and returns it as a blob
       .then((blob) => {
         // Here's where you get access to the blob
