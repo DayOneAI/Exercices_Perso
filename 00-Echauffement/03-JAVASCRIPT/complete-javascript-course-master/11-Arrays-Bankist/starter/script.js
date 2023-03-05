@@ -62,6 +62,7 @@ const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = ''; // vidage contenu
   movements.forEach((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
@@ -160,3 +161,52 @@ const cryptoUnique = new Set(['BTC', 'BTC', 'BNB', 'USDT', 'USDT', 'ETH']);
 cryptoUnique.forEach((value, _, map) => {
   //console.log(`${value}: ${value}`);
 });
+
+////////////// Challenge ******************
+
+const data1Julia = [3, 5, 2, 12, 7];
+const data2Julia = [9, 16, 6, 8, 3];
+
+const data1Kate = [4, 1, 15, 8, 3];
+const data2Kate = [10, 5, 6, 1, 4];
+
+const dogsJulia = [...data1Julia, ...data2Julia];
+const dogsKate = [...data1Kate, ...data2Kate];
+
+//console.log(dogsJulia, dogsKate);
+
+const checkDogs = function (arr1, array2) {
+  const arr1Copy = arr1.slice();
+  arr1Copy.splice(-1);
+  arr1Copy.shift(0);
+  //console.log(arr1Copy);
+
+  const dogs = [...arr1Copy, ...array2];
+
+  dogs.forEach((i, dog) => {
+    const dogCategory =
+      dog > 5 ? `an adult, and is ${dog} years old` : `still a puppy`;
+    console.log(`Dog numéro ${i + 1} is ${dogCategory}`);
+  });
+};
+
+//checkDogs(dogsJulia, dogsKate);
+
+////////////// MAP METHOD ******************
+
+const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+
+console.log(movements);
+console.log(movementsUSD);
+
+const tabNew = tab4.map(function (tab) {
+  return tab * 10;
+});
+
+console.log(tabNew);
