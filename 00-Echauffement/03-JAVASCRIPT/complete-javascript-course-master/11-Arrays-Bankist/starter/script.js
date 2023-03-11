@@ -80,6 +80,26 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const createUsernames = function (accs) {
+  accs.forEach(acc => {
+    acc.username = acc.owner
+      .toLocaleLowerCase()
+      .split(' ')
+      .map(el => el.at(0))
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+// console.log(accounts);
+
+const calcDisplayBalance = movements => {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -202,11 +222,81 @@ const eurToUsd = 1.1;
 
 const movementsUSD = movements.map(mov => mov * eurToUsd);
 
-console.log(movements);
-console.log(movementsUSD);
+// console.log(movements);
+// console.log(movementsUSD);
 
-const tabNew = tab4.map(function (tab) {
-  return tab * 10;
+// const tabNew = tab4.map(function (tab) {
+//   return tab * 10;
+// });
+
+// console.log(tabNew);
+
+movements.forEach((mov, i, array) => {
+  if (mov > 0) {
+    //console.log(`Test ${i + 1} : Bravo tu as gagné ${mov} point(s)`);
+  } else {
+    //console.log(`Test ${i + 1} : Oups, tu as perdu ${Math.abs(mov)} point(s)`);
+  }
 });
 
-console.log(tabNew);
+// const movementsDescriptions = movements.map((mov, i) => {
+//   const result =
+//     mov > 0
+//       ? `Test ${i + 1} : Bravo tu as gagné ${mov} point(s)`
+//       : `Test ${i + 1} : Oups, tu as perdu ${Math.abs(mov)} point(s)`;
+//   return result;
+// });
+
+// const movementsDescriptions = movements.map(
+//   (mov, i) =>
+//     `Movement ${i + 1} : You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+//       mov
+//     )}`
+// );
+// console.log(movementsDescriptions);
+
+const testDescriptions = tests.map(
+  (test, i) =>
+    `Movement ${i + 1} : You ${test > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      test
+    )}`
+);
+//console.log(testDescriptions);
+
+////////////// FILTER METHOD ******************
+
+const deposits = tests.filter(mov => mov > 0);
+// console.log(deposits);
+
+const balance = tests.reduce((acc, cur, i, arr) => {
+  //console.log(`Iteration ${i + 1} : ${acc}`);
+  return acc + cur;
+}, 0);
+
+//console.log(balance);
+
+////////////// SPRED OPERATOR ******************
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+//console.log(numbersCombined);
+
+////////////// Rest Pattern and Parameters ******************
+
+const tabl = [1, 2, ...[3, 4]]; // => SPREAD, car c'est à droite du signe "="
+
+const [a, b, ...others] = [1, 2, 3, 4, 5]; // => REST , car c'est à gauche du signe "="
+
+// console.log(a, b, others);
+
+////////////// SHORT Circuiting ******************
+
+const numGuests = 25;
+const guest1 = numGuests ? numGuests : 10; // mode ternaire
+//console.log(guest1);
+
+const guest2 = numGuests || 10; // mode SHORT Circuiting
+//onsole.log(guest2);
+
+console.log(0 && 'Bamba');
+console.log(7 && 'Bamba');
