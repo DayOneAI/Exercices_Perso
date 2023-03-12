@@ -298,5 +298,61 @@ const guest1 = numGuests ? numGuests : 10; // mode ternaire
 const guest2 = numGuests || 10; // mode SHORT Circuiting
 //onsole.log(guest2);
 
-console.log(0 && 'Bamba');
-console.log(7 && 'Bamba');
+//console.log(0 && 'Bamba');
+//console.log(7 && 'Bamba');
+
+let x = (1 && 2) ?? 3;
+// console.log(x);
+
+////////////// Logical Assignment Operators ******************
+
+const rest1 = {
+  name: 'Paradis',
+  numGuests: 30,
+};
+
+const rest2 = {
+  name: 'Mangue',
+  owner: 'Fatou FALL',
+};
+
+rest1.numGuests = rest1.numGuests || 10; // retourne valeur de numGuests de l'objet rest1 s'il existe, si non la valeur de 10
+rest1.numGuests ||= 10; // en plus condensé
+rest2.numGuests = rest1.numGuests || 10; // retourne valeur de numGuests de l'objet rest1 s'il existe, si non la valeur de 10
+rest2.numGuests ||= 10; // en plus condensé
+
+//console.log(rest1);
+//console.log(rest2);
+
+let user = {
+  name: 'John',
+  age: 30,
+};
+
+//console.log(Object.keys(user));
+//console.log(Object.values(user));
+//console.log(Object.entries(user));
+
+// tasks = {
+//   takk: 'Lecture',
+//   date: "Aujourd'hui",
+//   repeat: true,
+// };
+
+//const tests = [10, -50, 4800, 2800, -7650, 5030, 960, 698];
+const totalDepositsUSD = tests
+  .filter(mov => mov > 0)
+  .map((mov, i, arr) => {
+    // console.log(arr);
+    return mov * eurToUsd;
+  })
+  // .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+//console.log(totalDepositsUSD);
+
+// -------------------------FIND-------------
+const found = tests.find(element => element > 100);
+// console.log(found);
+
+const isLargeNumber = element => element > 13;
+console.log(tests.findIndex(isLargeNumber));
