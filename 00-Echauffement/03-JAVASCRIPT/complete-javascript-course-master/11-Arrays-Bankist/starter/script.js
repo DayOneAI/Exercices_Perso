@@ -101,6 +101,38 @@ const calcDisplayBalance = movements => {
 calcDisplayBalance(account1.movements);
 
 /////////////////////////////////////////////////
+
+// Array Methods Practice
+
+// 1.)--------- Combien se trouve dans tous les comptes de la banque
+const budget = accounts.map(budg => budg.movements);
+//console.log(budget);
+const flatBudget = budget.flat();
+//console.log(flatBudget);
+const totBudget = flatBudget.reduce((acc, cur, i, arr) => acc + cur);
+console.log(`Solde comptes : ${totBudget}`);
+
+// 2.)-------- Combien a été déposé dans tous les comptes de la banque
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur);
+console.log(`Nbre dépôts comptes : ${bankDepositSum}`);
+
+// 3.)-------- Combien a été rétiré dans tous les comptes de la banque
+const bankRetraitSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov < 0)
+  .reduce((sum, cur) => sum + cur);
+console.log(`Nbre retrait comptes : ${bankRetraitSum}`);
+
+// 4.)-------- Nbre dépot étant supérieure ou égale à 1000
+const bankDepotsup1000 = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov >= 1000).length;
+
+console.log(bankDepotsup1000);
+
 /////////////////////////////////////////////////
 // LECTURES
 
@@ -355,4 +387,11 @@ const found = tests.find(element => element > 100);
 // console.log(found);
 
 const isLargeNumber = element => element > 13;
-console.log(tests.findIndex(isLargeNumber));
+// console.log(tests.findIndex(isLargeNumber));
+
+// -------------------------Sort-------------
+
+let numbers = [0, 1, 2, 3, 10, 20, 30];
+numbers.sort((a, b) => a - b);
+
+//console.log(numbers);

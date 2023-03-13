@@ -251,3 +251,9 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// console.log(0.1 + 0.2);
+
+//console.log(+'23');
+
+console.log(Number.parseInt('40px'));
