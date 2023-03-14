@@ -256,4 +256,31 @@ btnSort.addEventListener('click', function (e) {
 
 //console.log(+'23');
 
-console.log(Number.parseInt('40px'));
+// console.log(Number.parseInt('40px'));
+
+// console.log(Number.parseFloat('65.36px'));
+
+// console.log(Number.isNaN(65));
+// console.log(Number.isNaN('65'));
+// console.log(Number.isNaN(+'65'));
+// console.log(Number.isNaN(+'65X'));
+
+// console.log(Number.isFinite(65));
+// console.log(Number.isFinite('65'));
+// console.log(Number.isFinite(+'65'));
+// console.log(Number.isFinite(+'65X'));
+// console.log(Number.isFinite(45 / 0));
+
+// console.log(Math.sqrt(36));
+// console.log(36 ** (1 / 2));
+
+// console.log(Math.max(65, 98, 49, 36));
+// console.log(Math.max(65, '98', 49, 36));
+// console.log(Math.max(65, 98, '49px', 36));
+// console.log(Math.max(65, '98px', 49, 36));
+
+// console.log(Math.PI * Number.parseFloat('15px') ** 2);
+
+console.log(Math.trunc(Math.random() * 6));
+
+const randomInt = (min, max) => Math.trunc(Math.random()(max - min) + 1);
