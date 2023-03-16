@@ -281,6 +281,34 @@ btnSort.addEventListener('click', function (e) {
 
 // console.log(Math.PI * Number.parseFloat('15px') ** 2);
 
-console.log(Math.trunc(Math.random() * 6));
+//console.log(Math.trunc(Math.random() * 6));
 
 const randomInt = (min, max) => Math.trunc(Math.random()(max - min) + 1);
+
+// console.log((4.6).toFixed(0));
+// console.log((4.6).toFixed(3));
+// console.log((4.698).toFixed(2));
+// console.log((4.626).toFixed(1));
+// console.log(+(4.626).toFixed(1));
+
+// const isPair = n => n % 2 === 0;
+// console.log(isPair(5));
+// console.log(isPair(10));
+
+// .forEach(function (row, i) {
+//   // 0, 2, 4, 6
+//   if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+//   // 0, 3, 6, 9
+//   if (i % 3 === 0) row.style.backgroundColor = 'blue';
+// });
+
+const dim = 768_989_568_105;
+// console.log(dim);
+
+// console.log(Number('56_988'));
+// console.log(parseInt('526_000'));
+// console.log(2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(2 ** 53 + 1);
+// console.log(2 ** 53 + 2);
+console.log(6989646688468768648646467);
