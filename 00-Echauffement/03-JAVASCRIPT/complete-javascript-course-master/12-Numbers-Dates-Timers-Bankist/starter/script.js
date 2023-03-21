@@ -394,3 +394,5 @@ const dateImportante = new Date(2045, 1, 20, 5, 6, 33);
 // const day1 = calcduree(new Date(2050, 4, 3), new Date(2050, 4, 20));
 
 // console.log(day1);
+
+// ----------------------------
