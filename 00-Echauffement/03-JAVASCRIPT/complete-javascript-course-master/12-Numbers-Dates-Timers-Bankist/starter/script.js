@@ -437,3 +437,25 @@ const dateImportante = new Date(2045, 1, 20, 5, 6, 33);
 
 // const locale = navigator.language;
 // console.log(new Intl.DateTimeFormat(locale, options).format(now));
+
+// -------------------------------
+const nbre = 9842464959.684;
+// console.log('US: ', new Intl.NumberFormat('en-US').format(nbre));
+// console.log('Germany: ', new Intl.NumberFormat('de-DE').format(nbre));
+// console.log('Syria: ', new Intl.NumberFormat('ar-SY').format(nbre));
+// console.log(
+//   navigator.language,
+//   new Intl.NumberFormat(navigator.language).format(nbre)
+// );
+
+const options = {
+  style: 'unit',
+  unit: 'mile-per-hour',
+};
+console.log('US: ', new Intl.NumberFormat('en-US', options).format(nbre));
+console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(nbre));
+console.log('Syria: ', new Intl.NumberFormat('ar-SY', options).format(nbre));
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language, options).format(nbre)
+);
