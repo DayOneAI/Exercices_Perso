@@ -448,14 +448,29 @@ const nbre = 9842464959.684;
 //   new Intl.NumberFormat(navigator.language).format(nbre)
 // );
 
-const options = {
-  style: 'unit',
-  unit: 'mile-per-hour',
-};
-console.log('US: ', new Intl.NumberFormat('en-US', options).format(nbre));
-console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(nbre));
-console.log('Syria: ', new Intl.NumberFormat('ar-SY', options).format(nbre));
-console.log(
-  navigator.language,
-  new Intl.NumberFormat(navigator.language, options).format(nbre)
-);
+// const options = {
+//   style: 'unit',
+//   unit: 'mile-per-hour',
+// };
+// console.log('US: ', new Intl.NumberFormat('en-US', options).format(nbre));
+// console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(nbre));
+// console.log('Syria: ', new Intl.NumberFormat('ar-SY', options).format(nbre));
+// console.log(
+//   navigator.language,
+//   new Intl.NumberFormat(navigator.language, options).format(nbre)
+// );
+
+// -------------------------------
+
+// setTimeout(() => console.log('I am the King'), 3000);
+// setTimeout(
+//   (area1, area2) => console.log(` I am the king of ${area1} and ${area2}`),
+//   3000,
+//   'Zone 1',
+//   'Zone 2'
+// );
+
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 2000);
